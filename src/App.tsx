@@ -26,6 +26,7 @@ function App() {
           showCountries={showCountries}
           rotationSpeed={0.0005}
           countryData={showData ? DEMO_COUNTRY_DATA : undefined}
+          modelUrl={`${import.meta.env.BASE_URL}models/atlas_hex_subdiv_6.glb`}
         />
       </div>
 
