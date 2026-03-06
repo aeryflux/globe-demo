@@ -15,6 +15,7 @@ const DEMO_COUNTRY_DATA = {
 function App() {
   const [surface, setSurface] = useState<Surface>('green');
   const [showCountries, setShowCountries] = useState(true);
+  const [showCities, setShowCities] = useState(true);
   const [showData, setShowData] = useState(false);
 
   return (
@@ -24,6 +25,7 @@ function App() {
         <Globe
           surface={surface}
           showCountries={showCountries}
+          showCities={showCities}
           rotationSpeed={0.0003}
           bloomStrength={0.3}
           glowIntensity={0.5}
@@ -57,6 +59,14 @@ function App() {
               onChange={(e) => setShowCountries(e.target.checked)}
             />
             countries
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              checked={showCities}
+              onChange={(e) => setShowCities(e.target.checked)}
+            />
+            cities
           </label>
           <label>
             <input
