@@ -31,6 +31,7 @@ function App() {
           glowIntensity={0.5}
           countryData={showData ? DEMO_COUNTRY_DATA : undefined}
           modelUrl={`${import.meta.env.BASE_URL}models/atlas_hex_subdiv_6.glb`}
+          enableControls={true}
         />
       </div>
 
