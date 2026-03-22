@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>globe-demo</title>
+    <title>@aeryflux/globe</title>
+    <!-- Early theme initialization -->
+    <script>
+      (function() {
+        var surface = localStorage.getItem('globe-demo-surface') || 'dark';
+        document.documentElement.setAttribute('data-surface', surface);
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
