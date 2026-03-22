@@ -16,6 +16,9 @@
     "react-dom": "^19.2.0",
     "three": "^0.183.2"
   },
+  "overrides": {
+    "flatted": "^3.4.2"
+  },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
     "@types/node": "^24.10.1",
