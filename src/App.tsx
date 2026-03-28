@@ -14,6 +14,8 @@ function App() {
     rotationSpeed: 0.0003,
     bloomStrength: 0.5,
     glowIntensity: 1.2,
+    introAnimation: true,
+    introDuration: 2.5,
   });
   const [lastClicked, setLastClicked] = useState<string | null>(null);
 
@@ -28,7 +30,6 @@ function App() {
       </div>
 
       <div className="content-section">
-        <GlobeDevTools config={config} onChange={updateConfig} side="right" style={{ position: 'relative', top: 0, right: 0, alignSelf: 'flex-end' }} />
         <div className="content-body">
           <h1>aeryflux</h1>
           <p>{lastClicked || 'explore the world'}</p>
@@ -37,6 +38,7 @@ function App() {
             <a href="https://github.com/aeryflux/globe" target="_blank" rel="noopener">GitHub</a>
             <a href="https://www.npmjs.com/package/@aeryflux/globe" target="_blank" rel="noopener">npm</a>
           </div>
+          <GlobeDevTools config={config} onChange={updateConfig} style={{ pointerEvents: 'auto', marginTop: 8 }} />
         </div>
       </div>
     </div>
