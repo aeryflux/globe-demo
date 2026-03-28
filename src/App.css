@@ -1,56 +1,64 @@
 .app {
   width: 100vw;
   height: 100vh;
-  position: relative;
+  display: flex;
+  flex-direction: row;
   overflow: hidden;
   background: #06060e;
 }
 
-.globe-bg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+/* Globe — left side */
+.globe-section {
+  flex: 1;
+  min-width: 0;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
+/* Content — right side */
+.content-section {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 16px;
+}
+
+.content-body {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
+  gap: 12px;
 }
 
-.overlay h1 {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 4px;
+.content-body h1 {
+  font-size: 24px;
+  font-family: 'HemiHead', sans-serif;
+  letter-spacing: 3px;
   color: #ffffff;
   margin: 0;
 }
 
-.overlay p {
+.content-body p {
   font-size: 11px;
   letter-spacing: 2px;
   color: rgba(255, 255, 255, 0.3);
-  margin: 4px 0 20px;
+  margin: 0;
 }
 
 .links {
   display: flex;
-  gap: 12px;
-  pointer-events: auto;
+  gap: 10px;
 }
 
 .links a {
-  padding: 8px 20px;
-  border-radius: 16px;
+  padding: 8px 18px;
+  border-radius: 14px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: rgba(255, 255, 255, 0.6);
-  font-size: 12px;
+  font-family: 'HemiHead', sans-serif;
+  font-size: 11px;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -58,4 +66,19 @@
 .links a:hover {
   background: rgba(255, 255, 255, 0.12);
   color: #ffffff;
+}
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .app {
+    flex-direction: column;
+  }
+  .globe-section {
+    flex: 1;
+  }
+  .content-section {
+    width: 100%;
+    max-height: 200px;
+    padding: 12px;
+  }
 }

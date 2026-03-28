@@ -23,19 +23,20 @@ function App() {
 
   return (
     <div className="app">
-      <div className="globe-bg">
+      <div className="globe-section">
         <Globe {...config} onCountryClick={(name) => setLastClicked(name)} />
       </div>
 
-      <GlobeDevTools config={config} onChange={updateConfig} side="right" />
-
-      <div className="overlay">
-        <h1>aeryflux</h1>
-        <p>{lastClicked || 'explore the world'}</p>
-        <div className="links">
-          <a href="https://atlas.aeryflux.com">Atlas</a>
-          <a href="https://github.com/aeryflux/globe" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.npmjs.com/package/@aeryflux/globe" target="_blank" rel="noopener">npm</a>
+      <div className="content-section">
+        <GlobeDevTools config={config} onChange={updateConfig} side="right" style={{ position: 'relative', top: 0, right: 0, alignSelf: 'flex-end' }} />
+        <div className="content-body">
+          <h1>aeryflux</h1>
+          <p>{lastClicked || 'explore the world'}</p>
+          <div className="links">
+            <a href="https://atlas.aeryflux.com">Atlas</a>
+            <a href="https://github.com/aeryflux/globe" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.npmjs.com/package/@aeryflux/globe" target="_blank" rel="noopener">npm</a>
+          </div>
         </div>
       </div>
     </div>
