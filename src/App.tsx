@@ -10,11 +10,12 @@ function App() {
     showCountries: true,
     showBorders: true,
     showCities: false,
-    enableControls: false,
+    enableControls: true,
     rotationSpeed: 0.0003,
     bloomStrength: 0.5,
     glowIntensity: 1.2,
   });
+  const [lastClicked, setLastClicked] = useState<string | null>(null);
 
   const updateConfig = (partial: Partial<GlobeConfig>) => {
     setConfig(prev => ({ ...prev, ...partial }));
@@ -23,14 +24,14 @@ function App() {
   return (
     <div className="app">
       <div className="globe-bg">
-        <Globe {...config} />
+        <Globe {...config} onCountryClick={(name) => setLastClicked(name)} />
       </div>
 
       <GlobeDevTools config={config} onChange={updateConfig} side="right" />
 
       <div className="overlay">
         <h1>aeryflux</h1>
-        <p>explore the world</p>
+        <p>{lastClicked || 'explore the world'}</p>
         <div className="links">
           <a href="https://atlas.aeryflux.com">Atlas</a>
           <a href="https://github.com/aeryflux/globe" target="_blank" rel="noopener">GitHub</a>
