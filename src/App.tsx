@@ -6,7 +6,9 @@ import './App.css';
 function App() {
   const [config, setConfig] = useState<GlobeConfig>({
     surface: 'dark',
+    showGlobeFill: true,
     showCountries: true,
+    showBorders: true,
     showCities: false,
     enableControls: false,
     rotationSpeed: 0.0003,
