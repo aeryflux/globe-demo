@@ -1,19 +1,31 @@
-import { Globe } from '@aeryflux/globe/react';
+import { useState } from 'react';
+import { Globe, GlobeDevTools } from '@aeryflux/globe/react';
+import type { GlobeConfig } from '@aeryflux/globe/react';
 import './App.css';
 
 function App() {
+  const [config, setConfig] = useState<GlobeConfig>({
+    surface: 'dark',
+    showCountries: true,
+    showCities: false,
+    enableControls: false,
+    rotationSpeed: 0.0003,
+    bloomStrength: 0.5,
+    glowIntensity: 1.2,
+  });
+
+  const updateConfig = (partial: Partial<GlobeConfig>) => {
+    setConfig(prev => ({ ...prev, ...partial }));
+  };
+
   return (
     <div className="app">
       <div className="globe-bg">
-        <Globe
-          surface="dark"
-          showCountries={true}
-          showCities={false}
-          rotationSpeed={0.0003}
-          bloomStrength={0.5}
-          glowIntensity={1.2}
-        />
+        <Globe {...config} />
       </div>
+
+      <GlobeDevTools config={config} onChange={updateConfig} side="right" />
+
       <div className="overlay">
         <h1>aeryflux</h1>
         <p>explore the world</p>
