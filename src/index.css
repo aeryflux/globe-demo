@@ -2,7 +2,19 @@
 @import '@aeryflux/design/css';
 @import '@aeryflux/design/surfaces.css';
 
+@font-face {
+  font-family: 'HemiHead';
+  src: url('/fonts/HemiHead.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 #root {
   width: 100%;
   height: 100%;
+}
+
+h1, .links a {
+  font-family: 'HemiHead', sans-serif;
 }
