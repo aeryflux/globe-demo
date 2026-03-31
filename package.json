@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@aeryflux/design": "^0.3.0",
-    "@aeryflux/globe": "^0.6.5",
+    "@aeryflux/globe": "^0.7.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "three": "^0.183.2"
