@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  background: #06060e;
+  background: var(--color-bg-base);
 }
 
 .globe-section {
@@ -42,14 +42,14 @@
   font-size: 24px;
   font-family: 'HemiHead', sans-serif;
   letter-spacing: 3px;
-  color: #ffffff;
+  color: var(--color-text-primary);
   margin: 0;
 }
 
 .content-body p {
   font-size: 11px;
   letter-spacing: 2px;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--color-text-muted);
   margin: 0;
 }
 
@@ -62,8 +62,8 @@
   padding: 8px 18px;
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--border-color);
+  color: var(--color-text-secondary);
   font-family: 'HemiHead', sans-serif;
   font-size: 11px;
   text-decoration: none;
@@ -72,7 +72,7 @@
 
 .links a:hover {
   background: rgba(255, 255, 255, 0.12);
-  color: #ffffff;
+  color: var(--color-text-primary);
 }
 
 @media (max-width: 768px) {
