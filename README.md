@@ -42,6 +42,14 @@ npm install
 npm run dev
 ```
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup and PR guidelines.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for release history.
+
 ## License
 
-MIT - [AeryFlux](https://github.com/aeryflux)
+MIT - see [LICENSE](LICENSE) for details.
